@@ -46,10 +46,12 @@ requirements:
 
   host:
     - r-base
+    - {{native}}gsl
 
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - {{native}}gsl
 
 test:
   commands:
