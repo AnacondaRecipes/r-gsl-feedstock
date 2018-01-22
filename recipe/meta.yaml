@@ -10,8 +10,8 @@ package:
 source:
   fn: gsl_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/gsl_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/gsl/gsl_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/gsl_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/gsl/gsl_{{ version }}.tar.gz
   sha256: 4f9fc4dc8170ba93c9b45940448da089ce9ad4c45ba39c8f264e1505a3e03a02
 
 
