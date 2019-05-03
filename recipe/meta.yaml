@@ -14,7 +14,6 @@ source:
   sha256: f5d463239693f146617018987687db31b163653708cbae0b730b9b7bed81995c
 
 build:
-  merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
 
@@ -37,13 +36,15 @@ requirements:
     - {{posix}}make
     - {{posix}}coreutils         # [win]
     - {{posix}}zip               # [win]
+    - {{native}}gsl              # [win]
 
   host:
     - r-base
-
+    - gsl                        # [not win]
   run:
     - r-base
     - {{native}}gcc-libs         # [win]
+    - {{native}}gsl              # [win]
 
 test:
   commands:
